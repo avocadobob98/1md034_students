@@ -129,15 +129,11 @@ function menuIteams(n, k, i, a, p, pth){
 
  */
 
-
-/* jslint es6:true, indent: 2 */
-/* global Vue, io */
-/* exported vm */
 'use strict';
-//const socket = io();
+const socket = io();
 
 /* eslint-disable-next-line no-unused-vars */
-const vm4 = new Vue({
+const vm1 = new Vue({
     el: '#dots',
     data: {
         orders: {},

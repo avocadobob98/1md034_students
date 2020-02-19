@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-
+    <script src="/socket.io/socket.io.js" defer></script>
     <script defer type="text/javascript" src="js/menu.js"></script>
     <script defer src="js/js_script.js"></script>
     <script defer src="https://vuejs.org/js/vue.js"></script>
     <script defer src="js/vue_script.js"></script>
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/deli-very.css">
     <link href="https://fonts.googleapis.com/css?family=Devonshire&display=swap" rel="stylesheet">
@@ -125,6 +126,8 @@
                     <input  v-model="anonymt" type="radio" id="anonymt"  name="an"  value="anonymt"> Anonymt<br>
                 </p>
 
+        </section>
+
 
 
         <h1> Click in the map! </h1>
@@ -147,7 +150,7 @@
     <div id="order">
 
     </div>
-    </section>
+
     <footer>
     </footer>
 
