@@ -1,10 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>DELI-VERY</title>
-    </head>
-    <body>
-        <h1>Hello World!!!</h1>
-        <a href="/map" target="_blank">Open map in new window</a>.
+
+<head>
+
+    <script defer type="text/javascript" src="js/menu.js"></script>
+    <script defer src="js/js_script.js"></script>
+    <script defer src="https://vuejs.org/js/vue.js"></script>
+    <script defer src="js/vue_script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/deli-very.css">
+    <link href="https://fonts.googleapis.com/css?family=Devonshire&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<title>Lelles burgers</title>
+
+<meta charset="utf-8"/>
+
+<section id="header">
+
+<section id="headertext"> <h1>Lelles Burgers</h1> </section>
+
+<section id="headerpic">
+<img src="https://i.ibb.co/yWypqb1/bbb.jpg">
+
+</section>
+
+
+</section>
+
+
+
+<h4> Välj burgare:</h4>
+
+<div id="burgare">
+    <div v-for="burger in array">
+        <h4> {{ burger.namn }}</h4>
+        <img v-bind:src="burger.img" width="200" align="center" >
+
+        <ul>
+
+            <li> {{ burger.cal }}   </li>
+            <li> {{ burger.ingredienser }}  </li>
+            <li> {{ burger.allergier }}  </li>
+            <li> {{ burger.price }}  </li>
+        </ul>
+        <p>  <input type="checkbox" v-bind:value="burger.namn" v-bind:id="burger.id" v-model="burgers">{{burger.namn}}</p>
+
+    </div>
+</div>
+
+    <!--
+             <div v-for="burger in burgers">
+           <h4> {{ burger.namn }}</h4>
+
+                 <img v-bind:src="burger.image" width="200" align="center" >
+
+                 <ul>
+
+                     <li> {{ burger.cal }}  </li>
+                     <li> {{ burger.ingredienser }}  </li>
+                     <li> {{ burger.allergier }}  </li>
+                     <li> {{ burger.price }}  </li>
+                 </ul>
+
+
+             </div>
+        </div>
+
+    </div>
+
+    <!--
+
+    <section id="burgare">
+
+    </section>
+
+    -->
+
+
+    <section id="kontaktinfo">
+
+        <h4>Personlig information:</h4>
+
+        <p>Skriv in din personliga information för att beställa</p>
+
+                <form>
+                    <p>
+                        <label id="name" for="namn">För och efternamn:</label><br>
+                        <input type="text"  id="namn" name="n" required="required" placeholder="Namn" v-model="namn" />
+                    </p>
+
+                    <p>
+                        <label for="mail">Mail:</label><br>
+                        <input type="text" id="mail" name="m" required="required" placeholder="mail" v-model="mail"/>
+                    </p>
+
+
+
+
+
+                </form>
+
+
+        <p>
+            <label for="betalingsmetod">Betalningsmetod:</label><br />
+            <select id="betalingsmetod" name="betalining" v-model="betalingsmetod">
+                <option>Mastercard </option>
+                <option>Visa</option>
+                <option>Klarna</option>
+                <option>Pay pal</option>
+            </select>
+        </p>
+
+                <p>
+                    <label id="kön" for="kön">Kön:</label><br />
+                    <input v-model="man" type="radio"  id="man" name="an" checked="checked" value="man"> Man<br>
+                    <input v-model="kvinna" type="radio" id="kvinna" name="an"  value="kvinna"> Kvinna<br>
+                    <input  v-model="annat" type="radio" id="annat"  name="an" value="annat"> Annat<br>
+                    <input  v-model="anonymt" type="radio" id="anonymt"  name="an"  value="anonymt"> Anonymt<br>
+                </p>
+
+
+
+        <h1> Click in the map! </h1>
+        <div class="view-box">
+            <div id="dots" v-on:click="addOrder">
+                <div
+                        v-for="(order, key) in orders"
+                        v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+                    {{key}}
+                </div>
+            </div>
+        </div>
+
+
+
+<p>
+        <button id="button1" type="button" v-on:click="markDone(namn, mail,  betalingsmetod, man, kvinna, annat, anonymt)" >Ready to order</button>
+
+</p>
+    <div id="order">
+
+    </div>
+    </section>
+    <footer>
+    </footer>
+
     </body>
-</html>
+    </html>

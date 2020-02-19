@@ -1,0 +1,145 @@
+
+
+@media screen and (max-width: 1500px) {
+
+
+body {
+    margin-top:75px;
+    margin-left:200px;
+    font-family: "Roboto Light", sans-serif;
+    font-size:20px;
+}
+
+#header {
+
+    height: 200px;
+    overflow:hidden;
+    opacity: 0.9;
+
+}
+
+#headertext{
+
+    margin-top: -1px;
+    position: absolute;
+    margin-left:520px;
+    font-family: 'Devonshire', cursive;
+    margin-right: 10px;
+
+    font-size: 60px;
+
+}
+
+#headerpic {
+    width: 100%;
+    height: auto;
+    margin-left: 250px;
+
+}
+
+
+.allergier {
+    font-weight: bold;
+}
+
+#burgare{
+
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    border: 20px solid rgba(0, 0, 0, 0.93);
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+    border-width: 5px;
+    padding-left: 30px;
+}
+    #boxgrid{
+
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        margin-top: 50px;
+        margin-right: 100px;
+        margin-left: 100px;
+        border-width: 5px;
+        padding-left: 30px;
+    }
+
+
+
+#kontaktinfo {
+
+    border: 3px solid rgba(255, 255, 255, 0.93);
+    background: black;
+    margin-right: 100px;
+    color: aliceblue;
+    margin-left: 100px;
+
+}
+
+button{
+    width:125px;
+    padding:20px;
+    background: black;
+    color: aliceblue;
+}
+
+table{
+    Width: 60%;
+    height: 20%;
+    padding: 1%;
+    margin-left: 4%;
+    margin-right: 70%;
+
+}
+
+button1{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+button:hover {
+    color: greenyellow;
+}
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .view-box {
+        width: 90%;
+        height: 50vh;
+        margin: 1em auto;
+        overflow: scroll;
+        border: 1px solid rgba(0,0,0,0.4);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    #dots {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        background: url(/img/polacks.jpg);
+        background-repeat: no-repeat;
+        width:1920px;
+        height: 1078px;
+        cursor: crosshair;
+    }
+
+    #dots div {
+        position: absolute;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        width:20px;
+        height:20px;
+        text-align: center;
+    }
+
+    #orderList {
+        top:1em;
+        left:1em;
+        position: absolute;
+        z-index: 2;
+        color:black;
+        background: rgba(255,255,255, 0.5);
+        padding: 1em;
+    }
